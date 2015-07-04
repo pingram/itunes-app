@@ -47,7 +47,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="appsTableView" destination="c2I-b3-YXO" id="3hf-cY-Old"/>
+                        <outlet property="appsTableView" destination="c2I-b3-YXO" id="tXw-DI-0i2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
