@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B44DE871B48693F00CB744D /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44DE861B48693F00CB744D /* APIController.swift */; };
+		2B44DE891B4A4F6000CB744D /* Blank52.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B44DE881B4A4F6000CB744D /* Blank52.png */; };
 		2BD145D21B4785B000ADCE69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD145D11B4785B000ADCE69 /* AppDelegate.swift */; };
 		2BD145D41B4785B000ADCE69 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD145D31B4785B000ADCE69 /* SearchResultsViewController.swift */; };
 		2BD145D71B4785B000ADCE69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD145D51B4785B000ADCE69 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		2B44DE861B48693F00CB744D /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
+		2B44DE881B4A4F6000CB744D /* Blank52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blank52.png; sourceTree = "<group>"; };
 		2BD145CC1B4785B000ADCE69 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD145D01B4785B000ADCE69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BD145D11B4785B000ADCE69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 		2BD145CE1B4785B000ADCE69 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				2B44DE881B4A4F6000CB744D /* Blank52.png */,
 				2BD145D11B4785B000ADCE69 /* AppDelegate.swift */,
 				2BD145D31B4785B000ADCE69 /* SearchResultsViewController.swift */,
 				2B44DE861B48693F00CB744D /* APIController.swift */,
@@ -196,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BD145D71B4785B000ADCE69 /* Main.storyboard in Resources */,
+				2B44DE891B4A4F6000CB744D /* Blank52.png in Resources */,
 				2BD145DC1B4785B000ADCE69 /* LaunchScreen.xib in Resources */,
 				2BD145D91B4785B000ADCE69 /* Images.xcassets in Resources */,
 			);

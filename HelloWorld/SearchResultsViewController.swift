@@ -11,9 +11,8 @@ import UIKit
 class SearchResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
   
   let api = APIController()
-  
   var tableData = []
-  
+  var imageCache = [String:UIImage]()
   let kCellIdentifier: String = "SearchResultCell"
   
   @IBOutlet var appsTableView : UITableView!
@@ -44,8 +43,27 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
       imgData = NSData(contentsOfURL: imgURL),
       trackName = rowData["trackName"] as? String {
         cell.detailTextLabel?.text = formattedPrice
-        cell.imageView?.image = UIImage(data: imgData)
         cell.textLabel?.text = trackName
+        cell.imageView?.image = UIImage(named: "Blank52")
+        if let img = imageCache[urlString] {
+          cell.imageView?.image = img
+        } else {
+          let request: NSURLRequest = NSURLRequest(URL: imgURL)
+          let mainQueue = NSOperationQueue.mainQueue()
+          NSURLConnection.sendAsynchronousRequest(request, queue: mainQueue, completionHandler: { (response, data, error) -> Void in
+            if error == nil {
+              let image = UIImage(data: data)
+              self.imageCache[urlString] = image
+              dispatch_async(dispatch_get_main_queue(), {
+                if let cellToUpdate = tableView.cellForRowAtIndexPath(indexPath) {
+                  cellToUpdate.imageView?.image = image
+                }
+              })
+            } else {
+              println("Error: \(error.localizedDescription)")
+            }
+          })
+        }
     }
     return cell
   }
